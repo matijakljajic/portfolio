@@ -8,11 +8,38 @@
   font-weight: bold;
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 8vmin;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 2vmin;
+  background-color: royalblue;
+  color: beige;
+  user-select: none;
+}
+
+.header > .text {
+  font-size: 3vmin;
+  padding-left: 2.5vmin;
+  user-select: none;
+}
+
+.button:hover {
+  text-decoration: underline solid beige 0.8vmin;
+}
+
 body {
   min-height: 95dvh;
   background-image: url("resources/bliss.gif");
+  /*background-color: beige;*/
   background-size: 100dvw 100dvh;
   font-family: Silkscreen;
+  text-shadow: 0.25vmin 0.4vmin orangered;
 }
 
 h2 {
@@ -20,20 +47,26 @@ h2 {
 }
 
 .scrolling_text {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 5vmin;
+  height: 8vmin;
   overflow: hidden;
-  display: flex;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2vmin;
   background-color: royalblue;
   color: beige;
-  margin-top: -1vmin;
-  padding-top: 2.3vmin;
+  user-select: none;
 }
 
-.text {
+.scrolling_text > .text {
   font-size: 3vmin;
-  animation: animate_text 40s linear infinite;
+  pointer-events: none;
+  user-select: none;
+  animation: animate_text 30s linear infinite;
 }
 
 .text span {
@@ -70,31 +103,5 @@ h2 {
   z-index: 9999;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
   background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-
-.noise1 {
-  width: 100dvw;
-  height: 100dvh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 9999;
-  background: url("/resources/noise1.gif");
-  background-size: repeat;
-  opacity: 40%;
-  pointer-events: none;
-}
-
-.noise2 {
-  width: 100dvw;
-  height: 100dvh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 9999;
-  background: url("/resources/noise2.gif");
-  background-size: repeat;
-  opacity: 12%;
   pointer-events: none;
 }
