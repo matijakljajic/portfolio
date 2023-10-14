@@ -106,3 +106,16 @@ h2 {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+
+.noise {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+	background-image: url("/resources/noise.gif");
+  background-size: 100dvw 100dvh;
+  opacity: 40%;
+  pointer-events: none;
+}
