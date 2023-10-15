@@ -119,3 +119,16 @@ h2 {
   opacity: 40%;
   pointer-events: none;
 }
+
+.static {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+	background-image: url("/resources/static.gif");
+  background-size: repeat;
+  height: 100dvh;
+  pointer-events: none;
+}
