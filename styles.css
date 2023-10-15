@@ -121,6 +121,7 @@ h2 {
 }
 
 .static {
+  visibility: hidden;
   width: 100dvw;
   height: 100dvh;
   position: absolute;
