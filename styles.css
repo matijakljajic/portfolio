@@ -34,9 +34,18 @@
   cursor: pointer;
 }
 
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -9999;
+  object-fit: fill;
+}
+
 body {
   min-height: 95dvh;
-  background-image: url("resources/bliss.gif");
   /*background-color: beige;*/
   background-size: 100dvw 100dvh;
   font-family: Silkscreen;
