@@ -28,6 +28,10 @@
   padding-left: 2.5vmin;
   user-select: none;
 }
+.header a {
+  text-decoration: none; 
+  color: inherit;
+}
 
 .button:hover {
   text-decoration: underline solid beige 0.8vmin;
