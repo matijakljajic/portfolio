@@ -1,0 +1,17 @@
+<header class="site-header">
+  <nav class="site-nav">
+    {{ $currentPage := . -}}
+    <ul class="main-menu">
+      {{ $current := . }}
+      {{ range.Site.Menus.main }}
+      <li>
+        <a id="{{ if eq $current.RelPermalink .URL }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  <div id="error">
+    <p>:(</p>
+    <p>Please rotate the screen.<p>
+  </div>
+</header>
