@@ -147,14 +147,21 @@ header #error p:first-child {
 }
 
 @media screen and (max-width: 30rem) {
+  .site-nav {
+    display: block;
+    padding: 0rem;
+    font-weight: 750;
+    padding-left: 2.5vmin;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+  }
+  .site-nav a {
+    font-size: 1.7vmax;
+  }
   header {
-    height: 100dvh;
-  }
-  header a {
-    visibility: hidden;
-  }
-  header p {
-    visibility: visible;
+    padding-top: 0;
+    height: fit-content;
   }
 }
 
