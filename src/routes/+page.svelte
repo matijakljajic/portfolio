@@ -1,0 +1,238 @@
+<script lang="ts">
+    import { base } from '$app/paths';
+</script>
+
+<svelte:head>
+    <title>Matija Kljajić</title>
+    <meta name="description" content="Matija Kljajić is a student and an aspiring software engineer. Learn more about him, his projects and all-around work through this portfolio and blog.">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Matija Kljajic",
+            "url": "",
+            "image": "",
+            "sameAs": [
+                "https://www.linkedin.com/in/kljajicmatija",
+                "https://github.com/matijakljajic",
+                "https://matijakljajic.github.io/"
+            ],
+            "jobTitle": "Software Engineer"  
+        }
+    </script>
+</svelte:head>
+
+<div id="home">
+    <div id="head">
+        <h1 class="item-1"><span class="item-name">Matija Kljajić </span><span class="item-format">[Latin]</span></h1>
+        <h1 class="item-2"><span class="item-name">Матија Кљајић </span><span class="item-format">[Cyrillic]</span></h1>
+        <h1 class="item-3"><span class="item-name">Matija Kljaji\'c </span><span class="item-format">[LaTeX]</span></h1>
+    </div>
+    <div id="main">
+        <p>Just a <a href="{base}/about">student</a> focusing on his studies.</p>
+        <p>Feel free to contact me if you wish.</p>
+        <div>
+            <p style="text-align: center;">I am available on:</p>
+            <div id="links">
+                <ul class="links" style="margin-top: var(--size-fluid-3); margin-bottom: var(--size-3);">
+                    <a href="mailt&#111;&#58;%6Datij%&#54;1%6Blj&#97;jic17%&#51;3&#64;%67m%61&#105;&#108;&#46;%&#54;3&#111;m">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>E-mail</title>
+                                <path d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"/>
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kljajicmatija">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>LinkedIn</title>
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="https://github.com/matijakljajic">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>GitHub</title>
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </li>
+                    </a>
+                </ul>
+                <ul class="links">
+                    <a href="https://mastodon.social/explore">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Mastodon</title>
+                                <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/>
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="https://discordapp.com/users/545674835590774784">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Discord</title>
+                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="https://ko-fi.com/matijakljajic">
+                        <li>
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Ko-fi</title>
+                                <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+                            </svg>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="tail">
+        <!--Empty-->
+    </div>
+</div>
+
+<style>
+    #home {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #head {
+        display: grid;
+        justify-self: start;
+        justify-items: center;
+        align-items: center;
+        overflow: hidden;
+        white-space: nowrap;
+        user-select: none;
+        padding-bottom: var(--size-1);
+        border-bottom: 1px solid var(--text-1);
+    }
+
+    #head > * {
+        font-weight: normal;
+
+        grid-column-start: 1;
+        grid-row-start: 1;
+        position: relative;
+        display: block;
+    
+        text-align: center;
+    
+        animation-duration: 18s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .item-name {
+        color: var(--text-1);
+    }
+
+    .item-format {
+        font-size: 0.5em;
+        color: var(--text-2);
+    }
+
+    .item-1 {
+        animation-name: anim-1;
+    }
+
+    .item-2 {
+        animation-name: anim-2;
+    }
+
+    .item-3 {
+        animation-name: anim-3;
+    }
+
+    @keyframes anim-1 {
+        0%, 8.3% { left: -100%; opacity: 0; }
+        8.3%,25% { left: 0%; opacity: 1; }
+        33.33%, 100% { left: 110%; opacity: 0; }
+    }
+
+    @keyframes anim-2 {
+        0%, 33.33% { left: -100%; opacity: 0; }
+        41.63%, 58.29% { left: 0%; opacity: 1; }
+        66.66%, 100% { left: 110%; opacity: 0; }
+    }
+
+    @keyframes anim-3 {
+        0%, 66.66% { left: -100%; opacity: 0; }
+        74.96%, 91.62% { left: 0%; opacity: 1; }
+        100% { left: 110%; opacity: 0; }
+    }
+
+    #main {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    @media (orientation: portrait) {
+        #head > * {
+            font-size: 7.5cqw;
+        }
+        
+        #main {
+            height: 100%;
+        }
+    }
+
+    @media (width <= 400px) {
+        #main p {
+            font-size: 4.2cqw;
+        }
+    }
+
+    #links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+		display: flex;
+        justify-content: center;
+		gap: var(--size-6);
+	}
+
+	.links a {
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+    }
+
+    .links svg {
+		padding-inline: var(--size-1);
+        fill: var(--text-1);
+        max-width: 40px;
+	}
+
+    .links a:hover svg {
+        fill: var(--surface-1);
+    }
+
+	.links > *:hover {
+		background-color: var(--text-1);
+		cursor: pointer;
+	}
+
+	@media (width < 768px) {
+		.links {
+			gap: var(--size-3);
+		}
+	}
+</style>
