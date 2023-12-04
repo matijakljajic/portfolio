@@ -90,9 +90,6 @@
             </div>
         </div>
     </div>
-    <div id="tail">
-        <!--Empty-->
-    </div>
 </div>
 
 <style>
@@ -189,7 +186,7 @@
         }
     }
 
-    @media (width <= 400px) {
+    @media (width <= 450px) {
         #main p {
             font-size: 4.2cqw;
         }

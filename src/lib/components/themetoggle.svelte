@@ -41,6 +41,23 @@
     label {
 		display: none;
 		justify-self: end;
+
+		animation: fade_in 4s;
+		animation-iteration-count: 1;
+    	animation-fill-mode: forwards;	
+	}
+
+	label:hover {
+		cursor: pointer;
+	}
+
+	@keyframes fade_in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 
 	.toggle-checkbox {
