@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { base } from '$app/paths';
     import Image from "$lib/assets/404.gif";
+    import CSS from "../../app.css?inline";
 </script>
 
 <svelte:head>
     <title>Matija.Lost</title>
+    <link type='text/css' rel="stylesheet" href={CSS}>
 </svelte:head>
 
 <div id="center">

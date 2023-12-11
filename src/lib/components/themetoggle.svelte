@@ -1,6 +1,5 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	
 	import '../../app.css'
@@ -33,7 +32,7 @@
 </script>
 
 <label bind:this="{jsblock}">
-	<input class='toggle-checkbox' type='checkbox' on:click={() => setTheme()} bind:this="{themebtn}">
+	<input aria-label="Theme Toggle" class='toggle-checkbox' type='checkbox' on:click={() => setTheme()} bind:this="{themebtn}">
 	<div class='toggle-slot'><div class='toggle-button'></div></div>
 </label>
 
@@ -42,7 +41,7 @@
 		display: none;
 		justify-self: end;
 
-		animation: fade_in 4s;
+		animation: fade_in 0.5s;
 		animation-iteration-count: 1;
     	animation-fill-mode: forwards;	
 	}
@@ -73,15 +72,9 @@
 		position: relative;
 		height: 2em;
 		width: 4em;
-		border: 2px solid var(--gray-0);
+		border: 2px solid var(--border);
 		border-radius: 5em;
-		background-color: var(--gray-12);
-		transition: background-color 250ms;
-	}
-
-	.toggle-checkbox:checked ~ .toggle-slot {
-  		background-color: var(--gray-0);
-		border-color: var(--gray-12);
+		background-color: var(--background);
 	}
 
 	.toggle-button {
@@ -90,14 +83,13 @@
 		height: 1.568em;
 		width: 1.568em;
 		border-radius: 50%;
-		background-color: var(--gray-12);
-		box-shadow: inset 0px 0px 0px 0.2em var(--gray-0);
-		transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .70);
+		background-color: var(--background);
+		box-shadow: inset 0px 0px 0px 0.2em var(--border);
+		transition: transform 0.5s cubic-bezier(.26, 2, .46, .70);
 	}
 
 	.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
-		background-color: var(--gray-0);
-		box-shadow: inset 0px 0px 0px 0.2em var(--gray-12);
+		background-color: var(--background);
 		transform: translate(0.1em, 0.1em);
 	}
 </style>

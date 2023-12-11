@@ -7,28 +7,26 @@ html {
 	--font-mono: 'JetBrains Mono', monospace;
 
 	/* dark */
-	--brand-dark: var(--orange-3);
-	--brand-alt-dark: var(--yellow-3);
+	--brand-dark: var(--yellow-3);
 	--text-1-dark: var(--gray-3);
 	--text-2-dark: var(--gray-5);
 	--surface-1-dark: var(--gray-12);
 	--surface-2-dark: var(--gray-11);
 	--surface-3-dark: var(--gray-10);
 	--surface-4-dark: var(--gray-9);
-	--background-dark: var(--gradient-8);
-	--border-dark: var(--gray-9);
+	--background-dark: var(--gray-10);
+	--border-dark: var(--gray-4);
 
 	/* light */
-	--brand-light: var(--orange-10);
-	--brand-alt-light: var(--yellow-10);
+	--brand-light: var(--blue-10);
 	--text-1-light: var(--gray-8);
 	--text-2-light: var(--gray-7);
 	--surface-1-light: var(--gray-0);
 	--surface-2-light: var(--gray-1);
 	--surface-3-light: var(--gray-2);
 	--surface-4-light: var(--gray-3);
-	--background-light: none;
-	--border-light: var(--gray-4);
+	--background-light: var(--brown-0);
+	--border-light: var(--gray-9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,7 +34,6 @@ html {
 		color-scheme: dark;
 
 		--brand: var(--brand-dark);
-		--brand-alt: var(--brand-alt-dark);
 		--text-1: var(--text-1-dark);
 		--text-2: var(--text-2-dark);
 		--surface-1: var(--surface-1-dark);
@@ -53,7 +50,6 @@ html {
 		color-scheme: light;
 
 		--brand: var(--brand-light);
-		--brand-alt: var(--brand-alt-light);
 		--text-1: var(--text-1-light);
 		--text-2: var(--text-2-light);
 		--surface-1: var(--surface-1-light);
@@ -69,7 +65,6 @@ html {
 	color-scheme: dark;
 
 	--brand: var(--brand-dark);
-	--brand-alt: var(--brand-alt-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
 	--surface-1: var(--surface-1-dark);
@@ -84,7 +79,6 @@ html {
 	color-scheme: light;
 
 	--brand: var(--brand-light);
-	--brand-alt: var(--brand-alt-light);
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
 	--surface-1: var(--surface-1-light);
@@ -99,6 +93,7 @@ html,
 body {
 	height: 100dvh;
 }
+
 /*
 @media (width < 768px) {
 	main {
@@ -112,11 +107,11 @@ body {
 	}
 }
 */
+
 html {
 	color: var(--text-1);
 	accent-color: var(--link);
-	background-image: var(--background);
-	background-attachment: fixed;
+	background-color: var(--background);
 }
 
 img {
@@ -152,7 +147,7 @@ li {
 }
 
 a {
-	color: var(--brand-alt);
+	color: var(--brand);
 }
 
 a:visited {

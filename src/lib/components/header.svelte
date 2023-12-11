@@ -35,7 +35,7 @@
 	header {
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid var(--text-1);
+		border-bottom: 0.1054em solid var(--border);
 	}
 
 	nav {
@@ -53,13 +53,13 @@
 
 	.links > * {
 		padding-inline: var(--size-1);
-		border: 0.1054em solid transparent;
+		border: 0.3054em solid transparent;
 	}
 
 	.links > *:hover {
 		background-color: var(--text-1);
-		color: var(--surface-1);
-		border: 0.1054em solid var(--text-1);
+		color: var(--background);
+		border: 0.3054em solid var(--text-1);
 		cursor: pointer;
 	}
 
