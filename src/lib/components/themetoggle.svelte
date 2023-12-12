@@ -1,5 +1,4 @@
 <script lang="ts">
-	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 	
 	import '../../app.css'
@@ -40,23 +39,10 @@
     label {
 		display: none;
 		justify-self: end;
-
-		animation: fade_in 0.5s;
-		animation-iteration-count: 1;
-    	animation-fill-mode: forwards;	
 	}
 
 	label:hover {
 		cursor: pointer;
-	}
-
-	@keyframes fade_in {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
 	}
 
 	.toggle-checkbox {
@@ -72,8 +58,7 @@
 		position: relative;
 		height: 2em;
 		width: 4em;
-		border: 2px solid var(--border);
-		border-radius: 5em;
+		border: 2px solid var(--text-1);
 		background-color: var(--background);
 	}
 
@@ -82,9 +67,8 @@
 		position: absolute;
 		height: 1.568em;
 		width: 1.568em;
-		border-radius: 50%;
 		background-color: var(--background);
-		box-shadow: inset 0px 0px 0px 0.2em var(--border);
+		box-shadow: inset 0px 0px 0px 0.2em var(--text-1);
 		transition: transform 0.5s cubic-bezier(.26, 2, .46, .70);
 	}
 

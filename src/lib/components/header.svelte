@@ -11,17 +11,17 @@
 		<div></div>
 		
 		<!-- Navigation -->
-		<ul class="links">
-			<li class:st={path === "/"}>
-				<a href="{base}/">INDEX</a>
-			</li>
-			<li class:st={path === "/about"}>
-				<a href="{base}/about">ABOUT</a>
-			</li>
-			<li class:st={path === "/blog"}>
-				<a href="{base}/blog">BLOG</a>
-			</li>
-		</ul>
+		<div class="links">
+			<a href="{base}/">
+				<p class:st={path === "/"}>Index</p>
+			</a>
+			<a href="{base}/about">
+				<p class:st={path.includes("/about")}>About</p>
+			</a>
+			<a href="{base}/blog">
+				<p class:st={path.includes("/blog")}>Blog</p>
+			</a>
+		</div>
 
 		<div></div>
 	</nav>
@@ -35,7 +35,7 @@
 	header {
 		display: flex;
 		align-items: center;
-		border-bottom: 0.1054em solid var(--border);
+		border-bottom: 0.1054em solid var(--text-1);
 	}
 
 	nav {
@@ -43,6 +43,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding-block: var(--size-fluid-1);
+		text-transform: uppercase;
 	}
 
 	.links {
@@ -51,15 +52,14 @@
 		margin-block: 0;
 	}
 
-	.links > * {
-		padding-inline: var(--size-1);
-		border: 0.3054em solid transparent;
+	.links * {
+		padding-block: var(--size-1);
+		padding-inline: var(--size-2);
 	}
 
-	.links > *:hover {
+	.links *:hover {
 		background-color: var(--text-1);
 		color: var(--background);
-		border: 0.3054em solid var(--text-1);
 		cursor: pointer;
 	}
 
@@ -67,16 +67,30 @@
 		color: inherit;
 		text-decoration: none;
 	}
+	
+	@media (width >= 1920px) {
+		.links {
+			gap: var(--size-13);
+		}
+	}
 
 	@media (width < 768px) {
 		.links {
 			gap: var(--size-6);
 		}
+
+		.links * {
+			padding-inline: var(--size-1);
+		}
 	}
 
-	@media (width >= 1920px) {
+	@media (width < 360px) {
 		.links {
-			gap: var(--size-15);
+			gap: var(--size-3);
+		}
+
+		.links * {
+			padding-inline: var(--size-1);
 		}
 	}
 </style>

@@ -19,7 +19,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-top: 0.1054em solid var(--border);
+		border-top: 0.1054em solid var(--text-1);
 	}
 
 	p {
