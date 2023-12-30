@@ -28,7 +28,7 @@
 
 <svelte:head>
 	<link rel=canonical href="{base}/blog">
-    <title>Matija.Blog</title>
+    <title>Matija Kljajić - Blog</title>
     <meta name="description" content="I am currently a student and an aspiring software engineer. Learn more about me, my projects and all-around work through this portfolio and blog." />
 </svelte:head>
 
@@ -145,7 +145,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: var(--size-content-3);
+		max-width: var(--size-content-3);
 		margin-block: var(--size-fluid-1);
 	}
 
@@ -167,7 +167,8 @@
 		text-decoration: none;
 		line-height: 1;
 		margin: 0;
-		padding: var(--size-1);
+		padding-block: var(--size-2);
+		padding-inline: var(--size-1);
 	}
 
 	.title:hover {

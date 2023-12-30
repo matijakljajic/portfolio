@@ -210,10 +210,6 @@
     }
 
     @media (width <= 568px) {
-        #head > * {
-            font-size: 7.5cqw;
-        }
-
         #section-1 p {
             width: var(--size-13);
         }
@@ -255,7 +251,11 @@
 	}
 
 	@media (width < 768px) {
-		.links {
+        #head > * {
+            font-size: 7.5cqw;
+        }
+        
+        .links {
 			gap: var(--size-3);
 		}
 	}

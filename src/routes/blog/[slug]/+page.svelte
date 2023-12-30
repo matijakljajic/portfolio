@@ -6,7 +6,7 @@
 
 <!-- SEO -->
 <svelte:head>
-	<title>{data.meta.title}</title>
+	<title>MK - {data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta name="description" content={data.meta.description} />
@@ -75,6 +75,7 @@
 		padding: var(--size-1) var(--size-2);
 		margin-inline: var(--size-2);
 		text-wrap: nowrap;
+		user-select: none;
 	}
 
 	@media (orientation: portrait) {

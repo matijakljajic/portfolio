@@ -54,7 +54,6 @@
 	}
 
 	.toggle-slot {
-		margin-inline-end: var(--size-2);
 		position: relative;
 		height: 2em;
 		width: 4em;

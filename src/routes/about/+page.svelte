@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-    <title>Matija.About</title>
+    <title>About Matija</title>
     <meta name="description" content="I am currently a student and an aspiring software engineer. Learn more about me, my projects and all-around work through this portfolio and blog." />
 
     <link rel="canonical" href="{base}/" />
@@ -41,13 +41,13 @@
             <div>
                 <span><a href="">Setup</a></span>
             </div>
-            <div id="scrobble">
-                <div>
-                    <span>Last listened to <span class="song" bind:this="{ song1 }">[loading]</span>.</span>
-                </div>
-                <div>
-                    <span>Last listened to <span class="song" bind:this="{ song2 }">[loading]</span>.</span>
-                </div>
+        </div>
+        <div id="scrobble">
+            <div>
+                <span>Last listened to <span bind:this="{ song1 }">[loading]</span>.</span>
+            </div>
+            <div>
+                <span>Last listened to <span bind:this="{ song2 }">[loading]</span>.</span>
             </div>
         </div>
     </div>
@@ -74,24 +74,21 @@
     }
 
     #about > * {
-		width: var(--size-content-3);
+		max-width: var(--size-content-3);
     }
 
     #left {
         max-width: 240px;
+        padding-top: var(--size-3);
         display: flex;
         flex-direction: column;
-        gap: var(--size-2);
+        gap: var(--size-4);
         user-select: none;
-    }
-
-    #left a:hover {
-        text-decoration: none;
     }
 
     #avatar img {
         width: 100%;
-        margin-bottom: var(--size-fluid-1);
+        height: 100%;
         pointer-events: none;
     }
 
@@ -101,7 +98,7 @@
         gap: var(--size-1);
     }
 
-    #info > * {
+    #info > div, #scrobble {
         border-block: 0.1054em solid var(--text-1);
         text-transform: uppercase;
     }
@@ -120,15 +117,11 @@
     }
 
     #scrobble > * {
-        animation: animate_text 8s linear infinite;
+        animation: animate_text 12s linear infinite;
     }
 
     #scrobble > div > * {
         margin-right: var(--size-5);
-    }
-
-    .song {
-        text-decoration: none;
     }
 
     @keyframes animate_text {
