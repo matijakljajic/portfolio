@@ -187,7 +187,7 @@
 		text-align: right;
 	}
 
-    @media (width < 300px) {
+    @media only screen and (max-width: 300px) {
         .title {
             font-size: 9.5cqw;
         }
@@ -197,7 +197,7 @@
 		}
 	}
 
-    @media (width <= 640px) {
+    @media only screen and (max-width: 640px) {
         .posts {
             width: 100%;
         }

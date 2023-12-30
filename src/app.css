@@ -250,7 +250,7 @@ code .line::before {
 	color: rgba(115,138,148,.4);
 }
 
-@media (width <= 768px) {
+@media only screen and (max-width: 768px) {
 	.prose pre {
 		font-size: 2cqw;
 	}

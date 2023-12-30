@@ -27,7 +27,7 @@
 		color: var(--text-2);
 	}
 
-	@media (width <= 400px) {
+	@media only screen and (max-width: 400px) {
         p {
             font-size: 4.2cqw;
         }

@@ -133,7 +133,7 @@
         }
     }
 
-    @media (width <= 640px) {
+    @media only screen and (max-width: 640px) {
         #about > * {
             width: 100%;
         }
