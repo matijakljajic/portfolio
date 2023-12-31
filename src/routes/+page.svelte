@@ -209,7 +209,7 @@
         margin-bottom: initial;
     }
 
-    @media (width <= 568px) {
+    @media only screen and (max-width: 568px) {
         #section-1 p {
             width: var(--size-13);
         }
@@ -250,11 +250,11 @@
 		cursor: pointer;
 	}
 
-	@media (width < 768px) {
+	@media only screen and (max-width: 768px) {
         #head > * {
             font-size: 7.5cqw;
         }
-        
+
         .links {
 			gap: var(--size-3);
 		}

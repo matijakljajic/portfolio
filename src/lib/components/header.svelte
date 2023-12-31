@@ -68,13 +68,13 @@
 		text-decoration: none;
 	}
 	
-	@media (width >= 1920px) {
+	@media only screen and (min-width: 1920px) {
 		.links {
 			gap: var(--size-13);
 		}
 	}
 
-	@media (width < 768px) {
+	@media only screen and (max-width: 768px) {
 		.links {
 			gap: var(--size-6);
 		}
@@ -84,7 +84,7 @@
 		}
 	}
 
-	@media (width < 360px) {
+	@media only screen and (max-width: 360px) {
 		.links {
 			gap: var(--size-3);
 		}

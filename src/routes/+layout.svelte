@@ -31,7 +31,7 @@
 		padding-inline: var(--size-7);
 	}
 
-	@media (width <= 360px) {
+	@media only screen and (max-width: 360px) {
 		.layout {
 			padding-inline: var(--size-4);
 		}

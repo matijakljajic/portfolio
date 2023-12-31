@@ -38,7 +38,7 @@
 	article {
 		min-width: 0;
 		max-inline-size: var(--size-content-3);
-		margin-block: var(--size-8);
+		margin-block: var(--size-6);
 		margin-inline: auto;
 	}
 
