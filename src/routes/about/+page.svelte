@@ -2,7 +2,6 @@
     import { base } from '$app/paths';
     import { onMount } from "svelte";
 
-    let song: HTMLDivElement;
     let song1: HTMLSpanElement;
     let song2: HTMLSpanElement;
 
@@ -15,9 +14,8 @@
         const scrobble = fetch('https://last-scrobble.matijakljajic173.workers.dev')
             .then((response) => response.json())
             .then((data) => { songName = data["name"]; songUrl = data["url"]; artist = data["artist"]["#text"]; })
-            .then(() => {
-                song.innerHTML = "<div class=\"song\"><span>Last listened to \"<a href=" + songUrl + ">" + songName + "</a>\" by " + artist + ".</span></div><div class=\"song\"><span>Last listened to \"<a href=" + songUrl + ">" + songName + "</a>\" by " + artist + ".</span></div>";
-            });
+            .then(() => { song1.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; song2.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; });
+    
     });
 </script>
 
@@ -47,8 +45,13 @@
                 <span><a href="">Setup</a></span>
             </div>
         </div>
-        <div bind:this="{ song }" id="scrobble">
-            <div style="width: 100%; text-align: center;">[loading last scrobble]</div>
+        <div id="scrobble">
+            <div>
+                <span>Last listened to <span bind:this="{ song1 }">[loading]</span>.</span>
+            </div>
+            <div>
+                <span>Last listened to <span bind:this="{ song2 }">[loading]</span>.</span>
+            </div>
         </div>
     </div>
     <div id="right" class="prose">
@@ -119,7 +122,7 @@
         white-space: nowrap;
     }
 
-    #scrobble > .song {
+    #scrobble > * {
         animation: animate_text 12s linear infinite;
     }
 
