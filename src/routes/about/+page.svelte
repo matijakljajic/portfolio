@@ -2,24 +2,20 @@
     import { base } from '$app/paths';
     import { onMount } from "svelte";
 
-    let scrobble: HTMLDivElement;
     let song1: HTMLSpanElement;
     let song2: HTMLSpanElement;
 
-    onMount(async () => {
+    onMount(() => {
 
         let songName: String;
         let songUrl: String;
         let artist: String;
 
-        await fetch('https://last-scrobble.matijakljajic173.workers.dev')
+        const scrobble = fetch('https://last-scrobble.matijakljajic173.workers.dev')
             .then((response) => response.json())
             .then((data) => { songName = data["name"]; songUrl = data["url"]; artist = data["artist"]["#text"]; })
-            .then(() => { song1.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; song2.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; 
-        });
-
-        scrobble.style.visibility = "visible";
-        
+            .then(() => { song1.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; song2.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; });
+    
     });
 </script>
 
@@ -49,12 +45,12 @@
                 <span><a href="">Setup</a></span>
             </div>
         </div>
-        <div bind:this="{ scrobble }" id="scrobble">
+        <div id="scrobble">
             <div>
-                <span>Last listened to <span bind:this="{ song1 }"></span>.</span>
+                <span>Last listened to <span bind:this="{ song1 }">[loading]</span>.</span>
             </div>
             <div>
-                <span>Last listened to <span bind:this="{ song2 }"></span>.</span>
+                <span>Last listened to <span bind:this="{ song2 }">[loading]</span>.</span>
             </div>
         </div>
     </div>
@@ -121,7 +117,6 @@
 
     #scrobble {
         display: flex;
-        visibility: hidden;
         align-items: center;
         overflow: hidden;
         white-space: nowrap;
