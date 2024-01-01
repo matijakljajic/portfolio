@@ -43,7 +43,7 @@
                 <span><a href="">Experience</a></span>
             </div>-->
             <div>
-                <span><a href="">Projects</a></span>
+                <span><a href="{base}/projects">Projects</a></span>
             </div>
             <div>
                 <span><a href="">Setup</a></span>
