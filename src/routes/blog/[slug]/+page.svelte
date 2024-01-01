@@ -63,7 +63,6 @@
 		overflow-x: auto;
 		-ms-overflow-style: none;  /* IE and Edge */
   		scrollbar-width: none;
-		white-space: nowrap;
 	}
 
 	.tags::-webkit-scrollbar {
@@ -75,6 +74,7 @@
 		background-color: var(--text-1);
 		padding: var(--size-1) var(--size-2);
 		margin-inline: var(--size-2);
+		text-wrap: nowrap;
 		user-select: none;
 	}
 
