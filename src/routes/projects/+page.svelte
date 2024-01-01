@@ -23,7 +23,7 @@
 			</div>
 		</li>
 		<li class="post">
-			<a href="https://github.com/matijakljajic/skolskabiblioteka"><div class="title">Database for the city library</div></a>
+			<a href="https://matijakljajic.github.io/skolskabiblioteka/"><div class="title">Database for the city library</div></a>
 			<p class="synopsis">Legacy software done for the school and city library. <br> The original project is not FOSS unfortunately and thus you can only go through a shallow copy.</p>
 			<div class="tagsdiv">
 				<div class="tags">

@@ -2,20 +2,25 @@
     import { base } from '$app/paths';
     import { onMount } from "svelte";
 
+    let loader: HTMLDivElement;
     let song1: HTMLSpanElement;
     let song2: HTMLSpanElement;
 
-    onMount(() => {
+    onMount(async () => {
 
         let songName: String;
         let songUrl: String;
         let artist: String;
 
-        const scrobble = fetch('https://last-scrobble.matijakljajic173.workers.dev')
+        await fetch('https://last-scrobble.matijakljajic173.workers.dev')
             .then((response) => response.json())
             .then((data) => { songName = data["name"]; songUrl = data["url"]; artist = data["artist"]["#text"]; })
-            .then(() => { song1.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; song2.innerHTML = "\"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist; });
+            .then(() => { song1.innerHTML = "Last listened to \"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist + "."; song2.innerHTML = "Last listened to \"<a href=" + songUrl + ">" + songName + "</a>\"" + " by " + artist + "."; });
     
+        loader.style.display = "none";
+        song1.style.display = "initial";
+        song2.style.display = "initial";
+
     });
 </script>
 
@@ -46,11 +51,14 @@
             </div>
         </div>
         <div id="scrobble">
-            <div>
-                <span>Last listened to <span bind:this="{ song1 }">[loading]</span>.</span>
+            <div id="loader" bind:this="{ loader }">
+                [loading scrobble]
             </div>
             <div>
-                <span>Last listened to <span bind:this="{ song2 }">[loading]</span>.</span>
+                <span id="song1" bind:this="{ song1 }"></span>
+            </div>
+            <div>
+                <span id="song2" bind:this="{ song2 }"></span>
             </div>
         </div>
     </div>
@@ -80,7 +88,7 @@
     }
 
     #left {
-        max-width: 240px;
+        width: 240px;
         padding-top: var(--size-3);
         display: flex;
         flex-direction: column;
@@ -122,12 +130,21 @@
         white-space: nowrap;
     }
 
-    #scrobble > * {
+    #song1, #song2 {
+        display: none;
+    }
+
+    #scrobble > div:not(#loader) {
         animation: animate_text 12s linear infinite;
     }
 
     #scrobble > div > * {
         margin-right: var(--size-5);
+    }
+
+    #loader {
+        width: 100%;
+        text-align: center;
     }
 
     @keyframes animate_text {

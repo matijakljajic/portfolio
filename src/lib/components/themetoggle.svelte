@@ -55,7 +55,7 @@
 
 	.toggle-slot {
 		position: relative;
-		height: 2em;
+		height: 2.005em;
 		width: 4em;
 		border: 2px solid var(--text-1);
 		background-color: var(--background);
