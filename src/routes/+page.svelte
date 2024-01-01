@@ -34,7 +34,7 @@
     <div id="main">
         <div id="section-1">
             <p><a href="{base}/about">Student</a> and an aspiring software developer.</p>
-            <p>Feel free to go through my <a href="">projects</a> and <a href="/Matija Kljajić - CV.pdf">CV</a>.</p>
+            <p>Feel free to go through my <a href="{base}/projects">projects</a> and <a href="/Matija Kljajić - CV.pdf">CV</a>.</p>
         </div>
         <div id="section-2">
             <div id="contact">
