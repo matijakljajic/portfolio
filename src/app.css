@@ -234,6 +234,10 @@ a:hover {
 	tab-size: 4;
 }
 
+.prose figure {
+	margin-top: var(--size-5);
+}
+
 code {
 	counter-reset: step;
 	counter-increment: step 0;

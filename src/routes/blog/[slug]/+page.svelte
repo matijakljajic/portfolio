@@ -43,7 +43,6 @@
 	}
 
 	hgroup h1 {
-		text-transform: capitalize;
 		font-size: var(--size-7);
 		margin-top: var(--size-2);
 	}

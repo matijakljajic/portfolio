@@ -82,6 +82,7 @@
 
 	#filter {
 		display: none;
+		text-transform: uppercase;
 	}
 
     #filter, #rss {
@@ -163,7 +164,6 @@
 		width: 100%;
 		color: var(--text-1);
 		font-size: var(--size-6);
-		text-transform: capitalize;
 		text-decoration: none;
 		line-height: 1;
 		margin: 0;

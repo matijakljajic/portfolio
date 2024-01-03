@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit'
 
 export async function load({ params }) {
-	const link = params.slug.replaceAll('-', ' ')
+	const link = params.slug.replaceAll('_', ' ')
 	try {
 		const post = await import(`../../../posts/${link}.md`)
 

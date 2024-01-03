@@ -1,13 +1,11 @@
 ---
-title: Tackling the Issue System on Github in another way
-description: Description of example 3.
-synopsis: Synopsis of example 3.
-date: '2023-4-18'
+title: Post Template
+description: Template description.
+date: '1999-9-9'
 categories:
-  - GitHub
   - Example
-  - Placeholder
-published: true
+  - Template
+published: false
 ---
 
 ## Table of Contents
@@ -20,14 +18,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus aliquam cu
 
 Fusce diam enim, tincidunt sed tellus vel, ullamcorper semper neque. Morbi laoreet et ex nec aliquam. Nulla facilisi. Curabitur consectetur ac purus id iaculis. Pellentesque euismod, tellus quis feugiat fringilla, nisl erat tincidunt odio, eget pellentesque metus lectus ut urna. Integer fringilla sapien vel suscipit volutpat. Vestibulum et tincidunt quam. Vivamus et pretium lectus.
 
-### Nam vel
+<figure>
+  <img src="/icon.png" alt="Example" style="width: 50%;"/>
+  <figcaption>This is my caption text.</figcaption>
+</figure>
+
+## Nam vel
 
 Nam vel mollis ipsum, id bibendum diam. Mauris iaculis, lacus at facilisis semper, dolor nunc euismod urna, sed tempor lacus lacus sit amet nibh. Nullam faucibus tortor sit amet massa bibendum, sed venenatis neque facilisis. Proin a elit sapien. Quisque mattis et ex quis porta. Aliquam erat volutpat. Mauris malesuada libero est. Etiam pharetra malesuada tortor, ut posuere urna vestibulum eu. Nam id sem a elit finibus maximus. Vivamus nisl urna, consectetur in erat ut, fermentum sollicitudin odio. Integer sem eros, dignissim et malesuada vitae, euismod non massa. Ut fringilla libero nec sapien lobortis, luctus sollicitudin tellus tristique. Duis facilisis ultricies ex in auctor.
 
-# Fusce nulla
+Here's some code in Java:
+```java
+public static void main() {
+	System.out.println("Hello");
+}
+```
+
+## Fusce nulla
 
 Fusce nulla lorem, imperdiet vel sem eget, condimentum lacinia libero. Suspendisse cursus consectetur lectus, eget hendrerit eros faucibus in. Duis sit amet enim lacus. Nulla justo nulla, mollis sed purus ac, viverra tincidunt elit. Integer dolor felis, suscipit in rhoncus aliquet, sollicitudin ac orci. Maecenas vulputate ut libero at feugiat. Mauris nec dapibus est, euismod lacinia nunc. Quisque orci nisl, accumsan id scelerisque ut, consequat fermentum turpis. In molestie posuere orci sit amet convallis. Etiam mollis sollicitudin ipsum. Aenean tristique tempus leo, sit amet hendrerit sem viverra et. Nam pellentesque sagittis mi, sed consectetur tortor posuere nec.
 
-# Curabitur laoreet
+### Curabitur laoreet
 
 Curabitur laoreet ante nisl, aliquet rhoncus turpis hendrerit aliquet. Ut vel dignissim ante. Nunc id erat a mauris consectetur maximus vitae sit amet tortor. Aliquam aliquet in nisi in sodales. Aliquam erat volutpat. Fusce orci lectus, ultrices in nisl eget, congue dictum massa. Maecenas congue libero ut vestibulum accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus vitae metus ac dignissim. Quisque imperdiet urna erat, cursus lacinia lectus ultricies a. Nulla accumsan at sapien placerat pharetra. Fusce sed diam augue...
