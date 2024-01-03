@@ -20,10 +20,18 @@
 
 		%sveltekit.head%
 
-		<script>
-			sessionStorage.getItem('theme') === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)')) ? 
-			document.documentElement.dataset.theme = 'dark' : 
-			document.documentElement.dataset.theme = 'light';
+		<script>	
+			if (!('theme' in sessionStorage)) {
+				if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+					sessionStorage.setItem('theme', 'light');
+				} else {
+					sessionStorage.setItem('theme', 'dark');
+				}
+			} else {
+				sessionStorage.getItem('theme') === 'dark' ? 
+				document.documentElement.dataset.theme = 'dark' : 
+				document.documentElement.dataset.theme = 'light';
+			}
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">

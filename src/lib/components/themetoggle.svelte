@@ -12,7 +12,6 @@
 		const theme = sessionStorage.getItem('theme');
 
 		if (theme != null) {
-			document.documentElement.dataset.theme = theme;
 			themebtn.checked = theme === "dark" ? false : true;
 		} else {
 			themebtn.checked = window.matchMedia('(prefers-color-scheme: dark)') ? false : true;
