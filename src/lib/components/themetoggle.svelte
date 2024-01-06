@@ -29,7 +29,7 @@
 	}
 </script>
 
-<label bind:this="{jsblock}">
+<label title="Change Theme" bind:this="{jsblock}">
 	<input aria-label="Theme Toggle" class='toggle-checkbox' type='checkbox' on:click={() => setTheme()} bind:this="{themebtn}">
 	<div class='toggle-slot'><div class='toggle-button'></div></div>
 </label>
@@ -47,7 +47,6 @@
 	.toggle-checkbox {
 		position: absolute;
 		opacity: 0;
-		cursor: pointer;
 		height: 0;
 		width: 0;
 	}
