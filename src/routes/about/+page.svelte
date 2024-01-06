@@ -5,8 +5,6 @@
     let loader: HTMLDivElement;
     let song1: HTMLSpanElement;
     let song2: HTMLSpanElement;
-    let song1div: HTMLDivElement;
-    let song2div: HTMLDivElement;
 
     onMount(async () => {
 
@@ -22,9 +20,6 @@
         loader.style.display = "none";
         song1.style.display = "initial";
         song2.style.display = "initial";
-        
-        song1div.classList.add('animated_text');
-        song2div.classList.add('animated_text');
 
     });
 </script>
@@ -59,10 +54,10 @@
             <div id="loader" bind:this="{ loader }">
                 [loading scrobble]
             </div>
-            <div bind:this="{ song1div }">
+            <div>
                 <span id="song1" bind:this="{ song1 }"></span>
             </div>
-            <div bind:this="{ song2div }">
+            <div>
                 <span id="song2" bind:this="{ song2 }"></span>
             </div>
         </div>
@@ -93,7 +88,7 @@
     }
 
     #left {
-        max-width: 240px;
+        width: 240px;
         padding-top: var(--size-3);
         display: flex;
         flex-direction: column;
@@ -106,8 +101,8 @@
     }
 
     #avatar img {
-        width: 240px;
-        height: 240px;
+        width: 100%;
+        height: 100%;
         pointer-events: none;
     }
 
@@ -139,6 +134,10 @@
         display: none;
     }
 
+    #scrobble > div:not(#loader) {
+        animation: animate_text 12s linear infinite;
+    }
+
     #scrobble > div > * {
         margin-right: var(--size-5);
     }
@@ -148,16 +147,12 @@
         text-align: center;
     }
 
-    .animated_text {
-        animation: animate_text 12s linear infinite;
-    }
-
     @keyframes animate_text {
         from {
-            transform: translateX(0%);
+            transform: translate(0, 0);
         }
         to {
-            transform: translateX(-100%);
+            transform: translate(-100%, 0);
         }
     }
 
