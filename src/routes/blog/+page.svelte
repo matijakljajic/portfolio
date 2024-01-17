@@ -29,7 +29,7 @@
 <svelte:head>
 	<link rel=canonical href="{base}/blog">
     <title>Matija Kljajić - Blog</title>
-    <meta name="description" content="I am currently a student and an aspiring software engineer. Learn more about me, my projects and all-around work through this portfolio and blog." />
+    <meta name="description" content="Aggregator of various interests, thoughts, and ideas with a blog-like structure. Built with Markdown." />
 </svelte:head>
 
 <div id="head">

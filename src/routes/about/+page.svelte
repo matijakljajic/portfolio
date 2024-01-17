@@ -25,10 +25,8 @@
 </script>
 
 <svelte:head>
-    <title>About Matija</title>
-    <meta name="description" content="I am currently a student and an aspiring software engineer. Learn more about me, my projects and all-around work through this portfolio and blog." />
-
     <link rel="canonical" href="{base}/" />
+    <title>About Matija</title>
 </svelte:head>
 
 <div id="about">

@@ -6,7 +6,7 @@
 
 <!-- SEO -->
 <svelte:head>
-	<title>MK - {data.meta.title}</title>
+	<title>{data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta name="description" content={data.meta.description} />

@@ -4,7 +4,7 @@
 
 <svelte:head>
     <title>Matija Kljajić</title>
-    <meta name="description" content="I am currently a student and an aspiring software engineer. Learn more about me, my projects and all-around work through this portfolio and blog." />
+    <meta name="description" content="Learn more about Matija, his projects and all-around work through this portfolio and blog." />
 
     <link rel="canonical" href="{base}/" />
 
