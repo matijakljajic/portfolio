@@ -6,6 +6,8 @@
     let song1: HTMLSpanElement;
     let song2: HTMLSpanElement;
 
+    let meme: HTMLSpanElement;
+
     onMount(async () => {
 
         let songName: String;
@@ -20,6 +22,15 @@
         loader.style.display = "none";
         song1.style.display = "initial";
         song2.style.display = "initial";
+
+        // todo: remove memegen
+        let memeUrl: String;
+
+        await fetch('https://meme-api.com/gimme/ProgrammerHumor')
+            .then((response) => response.json())
+            .then((data) => { memeUrl = data["url"] })
+            .then(() => { meme.innerHTML = "<a href=\"" + memeUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">CompSci</a>" });
+        
 
     });
 </script>
@@ -62,11 +73,11 @@
     </div>
     <div id="right" class="prose">
         <h2>Hello, I am Matija.</h2>
-        <p>Currently attending the University of <a href="https://en.wikipedia.org/wiki/Novi_Sad">Novi Sad</a>, but originally from a small town called <a href="https://en.wikipedia.org/wiki/U%C5%BEice">Užice</a>, where my CompSci journey started to unfold.</p>
+        <p>I am currently attending the University of <a href="https://en.wikipedia.org/wiki/Novi_Sad">Novi Sad</a> while researching various interesting subfields found in the world of <span bind:this="{ meme }">CompSci</span>.</p>
         <h3>Regarding Work</h3>
         <p>Feel free to <a href="{base}/">contact</a> me if any questions arise, although keep in mind that I would rather have serious inquiries over <a href="mailto:contact@matijakljajic.com">email</a> or even <a href="https://www.linkedin.com/in/kljajicmatija">LinkedIn</a>.</p>
         <h3>Some of my Interests</h3>
-        <p>My main interests consist of programming and a valid amount of data hoarding. (: <br> Aside from that, I really enjoy exploring the intricacies of different natural languages and how they've evolved over time. You can read more about my interests through the <a href="{base}/blog">blog</a>.</p>
+        <p>My interests mainly consist of programming and just a valid amount of data hoarding. <br> Aside from that, I really enjoy exploring the intricacies of different natural languages and how they've evolved over time. <br> You can read more about my interests through the <a href="{base}/blog">blog</a>.</p>
         <h2>About this site</h2>
         <p>With simplicity in mind, this site can work without JavaScript, although a couple of negligible functionalities will be disabled. Content written on the blog is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> unless stated otherwise.</p>
     </div>
